@@ -29,3 +29,6 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+### bronze 문제는 gitignore
+b[0-9]*/
