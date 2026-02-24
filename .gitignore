@@ -31,4 +31,4 @@ bin/
 .DS_Store
 
 ### bronze 문제는 gitignore
-b[0-9]*/
+#b[0-9]*/
