@@ -3,10 +3,10 @@ package baekjoon.week.week1.permutation;
 public class SwapPermutation {
 
     static int[] arr = {1, 2, 3, 4, 5};
-    static int N = arr.length;
-    static int R = 3;
-    static int cnt = 0;
+    static int n = arr.length;
+    static int r = 5;
 
+    static int cnt = 0;
     static StringBuilder sb = new StringBuilder();
 
     public static void main(String[] args) {
@@ -15,23 +15,26 @@ public class SwapPermutation {
     }
 
     private static void swapPermutation(int depth) {
-        if (depth == R) {
-            sb.append(++cnt + " - ");
-            for (int i = 0; i < R; ++i) sb.append(arr[i]).append(' ');
+        if (depth == r) {
+            sb.append(++cnt).append(" - ");
+            for (int i = 0; i < r; ++i) {
+                sb.append(arr[i]).append(' ');
+            }
             sb.append('\n');
             return;
         }
 
-        for (int i = depth; i < N; ++i) {
+        for (int i = depth; i < n; ++i) {
             swap(arr, depth, i);
             swapPermutation(depth + 1);
             swap(arr, depth, i);
         }
     }
 
-    private static void swap(int[] a, int i, int j) {
-        int t = a[i];
-        a[i] = a[j];
-        a[j] = t;
+    private static void swap(int[] arr, int i, int j) {
+        int t = arr[i];
+        arr[i] = arr[j];
+        arr[j] = t;
     }
+
 }
