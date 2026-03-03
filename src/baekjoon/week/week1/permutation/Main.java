@@ -8,21 +8,18 @@ public class Main {
     static int n = arr.length;
     static int r = 3;
 
-    static boolean[] visited = new boolean[n];
     static int[] result = new int[r];
+    static boolean[] visited = new boolean[n];
 
     static int cnt = 0;
-    static StringBuilder sb = new StringBuilder();
 
     public static void main(String[] args) {
         perm(0);
-        System.out.println(sb);
     }
 
     private static void perm(int depth) {
         if (depth == r) {
-            // result 출력
-            sb.append(++cnt).append(" - ").append(Arrays.toString(result)).append('\n');
+            System.out.println(++cnt + " - " + Arrays.toString(result));
             return;
         }
 

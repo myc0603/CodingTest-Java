@@ -11,10 +11,8 @@ public class NextPermutation {
 
     public static void main(String[] args) {
         do {
-            sb.append(++cnt).append(" - ").append(Arrays.toString(arr)).append('\n');
+            System.out.println(++cnt + " - " + Arrays.toString(arr));
         } while (nextPermutation());
-
-        System.out.println(sb);
     }
 
     private static boolean nextPermutation() {
@@ -31,9 +29,9 @@ public class NextPermutation {
         return true;
     }
 
-    private static void swap(int[] arr, int i, int j) {
-        int t = arr[i];
-        arr[i] = arr[j];
-        arr[j] = t;
+    private static void swap(int[] a, int i, int j) {
+        int t = a[i];
+        a[i] = a[j];
+        a[j] = t;
     }
 }

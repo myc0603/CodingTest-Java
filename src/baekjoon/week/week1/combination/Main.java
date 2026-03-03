@@ -11,16 +11,14 @@ public class Main {
     static int[] result = new int[r];
 
     static int cnt = 0;
-    static StringBuilder sb = new StringBuilder();
 
     public static void main(String[] args) {
         comb(0, 0);
-        System.out.println(sb);
     }
 
     private static void comb(int depth, int start) {
         if (depth == r) {
-            sb.append(++cnt).append(" - ").append(Arrays.toString(result)).append('\n');
+            System.out.println(++cnt + " - " + Arrays.toString(result));
             return;
         }
 

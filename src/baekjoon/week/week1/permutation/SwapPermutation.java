@@ -1,5 +1,8 @@
 package baekjoon.week.week1.permutation;
 
+import java.util.Arrays;
+
+
 public class SwapPermutation {
 
     static int[] arr = {1, 2, 3, 4, 5};
@@ -7,20 +10,14 @@ public class SwapPermutation {
     static int r = 5;
 
     static int cnt = 0;
-    static StringBuilder sb = new StringBuilder();
 
     public static void main(String[] args) {
         swapPermutation(0);
-        System.out.println(sb);
     }
 
     private static void swapPermutation(int depth) {
         if (depth == r) {
-            sb.append(++cnt).append(" - ");
-            for (int i = 0; i < r; ++i) {
-                sb.append(arr[i]).append(' ');
-            }
-            sb.append('\n');
+            System.out.println(++cnt + " - " + Arrays.toString(arr));
             return;
         }
 
@@ -36,5 +33,6 @@ public class SwapPermutation {
         arr[i] = arr[j];
         arr[j] = t;
     }
+
 
 }
