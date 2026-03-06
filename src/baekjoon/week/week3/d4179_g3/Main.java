@@ -37,17 +37,20 @@ public class Main {
             }
         }
 
-        for (int fire : fires) fireBfs(fire);
+        fireBfs();
         int ans = jhBfs();
 
         if (ans == -1) System.out.println("IMPOSSIBLE");
         else System.out.println(ans);
     }
 
-    static void fireBfs(int start) {
+    static void fireBfs() {
         ArrayDeque<Integer> q = new ArrayDeque<>();
-        q.add(start);
-        a[start] = 1;
+
+        for (Integer fire : fires) {
+            q.add(fire);
+            a[fire] = 1;
+        }
 
         while (!q.isEmpty()) {
             int cur = q.poll();
@@ -74,7 +77,7 @@ public class Main {
     static int jhBfs() {
         ArrayDeque<Integer> q = new ArrayDeque<>();
         time[jhStart] = 1;
-        q.push(jhStart);
+        q.add(jhStart);
 
         while (!q.isEmpty()) {
             int cur = q.poll();
