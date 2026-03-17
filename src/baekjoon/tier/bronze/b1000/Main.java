@@ -1,4 +1,4 @@
-package baekjoon.bronze.b1000;
+package baekjoon.tier.bronze.b1000;
 
 import java.io.*;
 import java.util.StringTokenizer;
