@@ -1,4 +1,4 @@
-package baekjoon.week.week2.practice;
+package practice.bfs_dfs;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,7 +6,6 @@ import java.io.InputStreamReader;
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.StringTokenizer;
-import java.util.jar.JarEntry;
 
 public class Dfs2DIter {
     static int n, m;

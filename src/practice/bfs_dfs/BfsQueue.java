@@ -1,4 +1,4 @@
-package baekjoon.week.week2.practice;
+package practice.bfs_dfs;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;

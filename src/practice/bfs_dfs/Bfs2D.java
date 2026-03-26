@@ -1,4 +1,4 @@
-package baekjoon.week.week2.practice;
+package practice.bfs_dfs;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package baekjoon.week.week1.permutation;
+package practice.permutation;
 
 import java.util.Arrays;
 

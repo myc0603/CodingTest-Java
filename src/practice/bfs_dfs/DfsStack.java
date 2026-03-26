@@ -1,9 +1,10 @@
-package baekjoon.week.week2.practice;
+package practice.bfs_dfs;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Deque;
 
-public class DfsRecursive {
-
+public class DfsStack {
     static int N = 6;
     static ArrayList<Integer>[] adj;
     static boolean[] visited;
@@ -19,7 +20,7 @@ public class DfsRecursive {
 
         visited = new boolean[N + 1];
 
-        dfs(1);
+        dfsIterative(1);
     }
 
     static void initGraph(int v) {
@@ -32,13 +33,20 @@ public class DfsRecursive {
         adj[b].add(a);
     }
 
-    static void dfs(int cur) {
-        visited[cur] = true;
-        System.out.println(cur);
+    static void dfsIterative(int start) {
+        Deque<Integer> stk = new ArrayDeque<>();
+        stk.push(start);
+        visited[start] = true;
 
-        for (int nxt : adj[cur]) {
-            if (visited[nxt]) continue;
-            dfs(nxt);
+        while (!stk.isEmpty()) {
+            int cur = stk.pop();
+            System.out.println(cur + " 방문");
+
+            for (int nxt : adj[cur]) {
+                if (visited[nxt]) continue;
+                visited[nxt] = true;
+                stk.push(nxt);
+            }
         }
     }
 }

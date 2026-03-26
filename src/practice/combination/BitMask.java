@@ -1,4 +1,4 @@
-package baekjoon.week.week1.combination;
+package practice.combination;
 
 public class BitMask {
     public static void main(String[] args) {
